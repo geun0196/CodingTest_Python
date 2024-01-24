@@ -1,8 +1,20 @@
-def solution(nums):
-    answer = 0
+# 시간 초과 
+# from itertools import combinations
+# def solution(nums):
+#     answer = 0
     
-    temp = []
+#     poketmon_list = list(combinations(nums,int(len(nums)/2)))
+
+#     for poketmon in poketmon_list:
+#         if len(set(poketmon)) > answer:
+#             answer = len(set(poketmon))
+
+#     return answer
+
+def solution(nums):   
+    answer = []
     for num in nums:
-        if len(temp) < len(nums)/2 and num not in temp:
-            temp.append(num)
-    return len(temp)
+        if len(answer) < len(nums)/2 and num not in answer:
+            answer.append(num)
+            
+    return len(answer)
